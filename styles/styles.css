@@ -1,0 +1,155 @@
+@font-face {
+  font-family: "BarlowCondensed";
+  src: url("../fonts/BarlowCondensed-Regular.ttf");
+}
+
+@font-face {
+  font-family: "BarlowCondensed Bold";
+  src: url("../fonts/BarlowCondensed-Bold.ttf");
+}
+
+@font-face {
+  font-family: "Bellefair";
+  src: url("../fonts/Bellefair-Regular.ttf");
+}
+
+/* * {
+  box-sizing: border-box;
+} */
+
+body {
+  background-image: url("../img/background-home-desktop.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+  font-family: "BarlowCondensed";
+  font-weight: 400;
+}
+
+.navbar__container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+  height: 150px;
+  padding-top: 1.25em;
+}
+
+.navbar__line {
+  width: 35%;
+  height: 0.25px;
+  opacity: 0.75;
+  background-color: #979797;
+  margin-left: 1.25em;
+  position: relative;
+  left: 40px;
+  z-index: 10;
+}
+
+.navbar__logo {
+  margin-left: 3.125em;
+}
+
+.navbar__list-background {
+  height: 100px;
+  width: 70%;
+  backdrop-filter: blur(1em);
+  background-color: rgba(66, 80, 97, 0.246);
+}
+
+.navbar__list-container {
+  list-style-type: none;
+  margin: 0;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: space-evenly;
+}
+
+.navbar__list-item{
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  letter-spacing: 0.16875em;
+  height: 96px;
+  cursor: pointer;
+}
+.navbar__list-item:hover{
+  border-bottom: rgba(255, 255, 255, 0.308) solid;
+}
+.active, .active:hover{
+  border-bottom: #fff solid;
+}
+.bold {
+  font-family: "BarlowCondensed Bold";
+  margin-right: 0.625em;
+}
+
+.navbar__list-link{
+  color: #fff;
+  text-decoration: none;
+}
+
+.main__flex {
+  margin-top: 15%;
+  margin-left: 9%;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 1fr;
+}
+
+.main__subtitle {
+  font-size: 1.75em;
+  letter-spacing: 0.296875em;
+  font-weight: 400;
+}
+
+.main__title {
+  font-size: 9.375em;
+  font-family: "Bellefair";
+  margin: 0;
+  font-weight: 400;
+}
+
+.main__text {
+  font-size: 1.125em;
+  width: 50%;
+  text-align: justify;
+  line-height: 2em;
+}
+
+.main__circle {
+  width: 300px;
+  height: 300px;
+  background-color: #fff;
+  border-radius: 50%;
+  justify-self: center;
+  align-self: end;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  cursor: pointer;
+}
+
+.main__circle:hover{
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  box-shadow: 0 0 1px 100px #ffffff25;
+}
+
+.main__explore {
+  margin: 0;
+  font-size: 2.5rem;
+  font-family: "Bellefair";
+  font-weight: 400;
+  color: #0b0d17;
+}
