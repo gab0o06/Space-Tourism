@@ -19,7 +19,9 @@
     <header class="navbar__container">
       <img class="navbar__logo" src="./svg/logo.svg" alt="logo" />
       <div class="navbar__line"></div>
-      <nav class="navbar__list-background">
+      <img id="menu-icon" class="navbar__menu-icon" src="./svg/menu_white_24dp.svg" alt="menú">
+      <nav id="menu-start" class="navbar__list-background">
+        <img id="close-icon" class="navbar__close-icon" src="./svg/close_white_24dp.svg" alt="close">
         <ul class="navbar__list-container">
           <li class="navbar__list-item active">
             <a class="navbar__list-link" href="#"> <span class="bold">00</span> HOME </a>
@@ -35,8 +37,8 @@
         </ul>
       </nav>
     </header>
-    <main class="main__flex">
-      <div>
+    <main class="main__grid">
+      <div class="main__text-container">
         <h2 class="main__subtitle">SO, YOU WANT TO TRAVEL TO</h2>
         <h1 class="main__title">SPACE</h1>
         <p class="main__text">
@@ -47,8 +49,9 @@
         </p>
       </div>
       <div class="main__circle">
-        <h3 class="main__explore">EXPLORE</h3>
+        <h3 class="main__explore"><a class="main__explore-link" href="#">EXPLORE</a></h3>
       </div>
     </main>
+    <script src="./scripts/scripts.js"></script>
   </body>
 </html>

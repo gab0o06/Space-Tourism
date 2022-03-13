@@ -66,34 +66,44 @@ body {
   align-content: center;
   justify-content: space-evenly;
 }
+.navbar__menu-icon {
+  display: none;
+}
+.navbar__close-icon {
+  display: none;
+  cursor: pointer;
+}
 
-.navbar__list-item{
+.navbar__list-item {
   display: flex;
   align-items: center;
-  font-size: 1rem;
+  font-size: 1em;
   letter-spacing: 0.16875em;
   height: 96px;
   cursor: pointer;
 }
-.navbar__list-item:hover{
+.navbar__list-item:hover {
   border-bottom: rgba(255, 255, 255, 0.308) solid;
 }
-.active, .active:hover{
+.active,
+.active:hover {
   border-bottom: #fff solid;
 }
+
 .bold {
   font-family: "BarlowCondensed Bold";
   margin-right: 0.625em;
 }
 
-.navbar__list-link{
+.navbar__list-link {
   color: #fff;
   text-decoration: none;
 }
 
-.main__flex {
+.main__grid {
   margin-top: 15%;
   margin-left: 9%;
+  margin-bottom: 4%;
   display: grid;
   grid-template-columns: 50% 50%;
   grid-template-rows: 1fr;
@@ -136,7 +146,7 @@ body {
   cursor: pointer;
 }
 
-.main__circle:hover{
+.main__circle:hover {
   width: 300px;
   height: 300px;
   border-radius: 50%;
@@ -148,8 +158,169 @@ body {
 
 .main__explore {
   margin: 0;
-  font-size: 2.5rem;
+  font-size: 2.5em;
   font-family: "Bellefair";
   font-weight: 400;
-  color: #0b0d17;
+  color: #000000;
+}
+
+.main__explore-link {
+  color: #000000;
+  text-decoration: none;
+}
+
+@media screen and (orientation: landscape) and (max-width: 1440px) {
+  .main__flex {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .main__circle {
+    align-self: center;
+  }
+
+  .main__circle:hover {
+    box-shadow: 0 0 1px 60px #ffffff25;
+  }
+}
+
+@media screen and (max-width: 768px) and (orientation: portrait) {
+  body {
+    background-image: url("../img/background-home-tablet.jpg");
+    font-size: 14px;
+  }
+  .navbar__line {
+    display: none;
+  }
+
+  .bold {
+    display: none;
+  }
+
+  .navbar__container {
+    justify-content: space-between;
+    height: 100px;
+    padding-top: 0;
+  }
+
+  .navbar__list-background {
+    width: 60%;
+  }
+  .navbar__list-container {
+    padding-left: 0;
+    padding-right: 30px;
+  }
+  .main__grid {
+    display: grid;
+    margin-top: 10%;
+    margin-left: 0;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50% 50%;
+  }
+
+  .main__text-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  .main__text {
+    text-align: center;
+  }
+  .main__circle {
+    margin-top: 40px;
+  }
+}
+
+@media screen and (max-width: 414px) and (orientation: portrait) {
+  body {
+    background-image: url("../img/background-home-mobile.jpg");
+    font-size: 16px;
+  }
+  .bold {
+    display: inline;
+  }
+  .navbar__list-container {
+    height: 50%;
+    width: 100%;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    padding-right: 0;
+    margin-top: 50px;
+    justify-content: flex-start;
+    align-items: stretch;
+  }
+  .navbar__list-item {
+    margin-left: 15%;
+    height: 30px;
+    margin-top: 20px;
+  }
+  .active,
+  .active:hover {
+    border-bottom: none;
+    border-right: #fff solid;
+  }
+
+  .navbar__close-icon {
+    display: block;
+  }
+  .navbar__logo {
+    margin-left: 2.125em;
+  }
+  .navbar__menu-icon {
+    display: block;
+    margin-right: 30px;
+    cursor: pointer;
+  }
+
+  .navbar__list-background {
+    display: none;
+  }
+
+  .menu-start {
+    display: flex;
+    height: 100vh;
+    width: 70%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    flex-direction: column;
+    align-items: flex-end;
+    backdrop-filter: blur(1em);
+    background-color: rgba(66, 80, 97, 0.246);
+  }
+
+  .navbar__list-item:hover {
+    border-bottom: none;
+  }
+
+  .main__subtitle {
+    font-size: 1em;
+    letter-spacing: 0.16875em;
+    font-weight: 400;
+  }
+  .main__title {
+    font-size: 5em;
+  }
+  .main__text {
+    font-size: 0.9375em;
+    width: 85%;
+  }
+  .main__circle {
+    width: 150px;
+    height: 150px;
+  }
+  .main__explore {
+    font-size: 1.25em;
+  }
+  .main__circle:hover {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    box-shadow: 0 0 0px 0px #ffffff25;
+  }
 }
