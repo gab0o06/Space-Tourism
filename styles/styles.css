@@ -236,6 +236,7 @@ body {
   body {
     background-image: url("../img/background-home-mobile.jpg");
     font-size: 16px;
+    background-repeat: repeat;
   }
   .bold {
     display: inline;
