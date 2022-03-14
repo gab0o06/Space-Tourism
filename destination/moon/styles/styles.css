@@ -1,0 +1,288 @@
+@font-face {
+    font-family: "BarlowCondensed";
+    src: url("../../../fonts/BarlowCondensed-Regular.ttf");
+  }
+  
+  @font-face {
+    font-family: "BarlowCondensed Bold";
+    src: url("../../../fonts/BarlowCondensed-Bold.ttf");
+  }
+  
+  @font-face {
+    font-family: "Bellefair";
+    src: url("../../../fonts/Bellefair-Regular.ttf");
+  }
+  
+  body {
+    background-image: url("../../img/background-destination-desktop.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    font-family: "BarlowCondensed";
+    font-weight: 400;
+  }
+  
+  .navbar__container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    height: 150px;
+    padding-top: 1.25em;
+  }
+  
+  .navbar__line {
+    width: 35%;
+    height: 0.25px;
+    opacity: 0.75;
+    background-color: #979797;
+    margin-left: 1.25em;
+    position: relative;
+    left: 40px;
+    z-index: 10;
+  }
+  
+  .navbar__logo {
+    margin-left: 3.125em;
+  }
+  
+  .navbar__list-background {
+    height: 100px;
+    width: 70%;
+    backdrop-filter: blur(1em);
+    background-color: rgba(66, 80, 97, 0.246);
+  }
+  
+  .navbar__list-container {
+    list-style-type: none;
+    margin: 0;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: space-evenly;
+  }
+  .navbar__menu-icon {
+    display: none;
+  }
+  .navbar__close-icon {
+    display: none;
+    cursor: pointer;
+  }
+  
+  .navbar__list-item {
+    display: flex;
+    align-items: center;
+    font-size: 1em;
+    letter-spacing: 0.16875em;
+    height: 96px;
+    cursor: pointer;
+  }
+  .navbar__list-item:hover {
+    border-bottom: rgba(255, 255, 255, 0.308) solid;
+  }
+  .active,
+  .active:hover {
+    border-bottom: #fff solid;
+  }
+  
+  .bold {
+    font-family: "BarlowCondensed Bold";
+    margin-right: 0.625em;
+  }
+  
+  .navbar__list-link {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .main__title{
+    margin-left: 9%;
+    font-size: 1.75em;
+    letter-spacing: 4.72px;
+    font-weight: 400;
+  }
+  .opacity{
+    opacity: 0.25;
+    font-family: "BarlowCondensed Bold";
+  }
+
+  .main__container{
+    margin-bottom: 1%;
+    margin-top: 6%;
+    display: grid;
+    grid-template-columns: 60% 1fr;
+  }
+
+  .main__moon-image{
+    justify-self: center;
+  }
+
+  .main__list{
+    list-style-type: none;
+    display: flex;
+    justify-content: start;
+    padding: 0;
+  }
+
+  .main__list-item{
+    margin-right: 3%;
+    font-size: 1em;
+    letter-spacing: 0.16875em;
+    font-weight: 400;
+    padding-bottom: 12px;
+  }
+
+  .main__link{
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .main__list-active{
+    border-bottom: #fff solid;
+  }
+  
+  .main__planet-name{
+    font-size: 6.25em;
+    font-family: "Bellefair";
+    font-weight: 400;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+
+  .main__planet-desc{
+    font-size: 1.125em;
+    font-family: "BarlowCondensed";
+    font-weight: 400;
+    margin-bottom: 40px;
+    line-height: 32px;
+    margin-right: 55%;
+    color: #D0D6F9;
+  }
+
+  .main__container-data{
+    width: 45%;
+    border-top: #383b4b70 solid;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .main__data-title{
+    font-size: 0.875em;
+    letter-spacing: 2.36px;
+    font-family: "BarlowCondensed";
+    font-weight: 400;
+    color: #D0D6F9;
+    margin-bottom: 10px;
+  }
+
+  .main__data-desc{
+    font-size: 1.75em;
+    margin-top: 0;
+    font-family: "Bellefair";
+    font-weight: 400;
+  }
+
+  .main__subdata-container{
+    margin-right: 15%;
+  }
+
+  @media screen and (max-width: 768px) and (orientation: portrait) {
+    body {
+      background-image: url("../../img/background-destination-tablet.jpg");
+      font-size: 14px;
+    }
+    .navbar__line {
+      display: none;
+    }
+  
+    .bold {
+      display: none;
+    }
+  
+    .navbar__container {
+      justify-content: space-between;
+      height: 100px;
+      padding-top: 0;
+    }
+  
+    .navbar__list-background {
+      width: 60%;
+    }
+    .navbar__list-container {
+      padding-left: 0;
+      padding-right: 30px;
+    }
+  }
+  
+  @media screen and (max-width: 414px) and (orientation: portrait) {
+    body {
+      background-image: url("../../img/background-destination-mobile.jpg");
+      font-size: 16px;
+      background-repeat: repeat;
+    }
+    .bold {
+      display: inline;
+    }
+    .navbar__list-container {
+      height: 50%;
+      width: 100%;
+      align-self: center;
+      display: flex;
+      flex-direction: column;
+      padding-right: 0;
+      margin-top: 50px;
+      justify-content: flex-start;
+      align-items: stretch;
+    }
+    .navbar__list-item {
+      margin-left: 15%;
+      height: 30px;
+      margin-top: 20px;
+    }
+    .active,
+    .active:hover {
+      border-bottom: none;
+      border-right: #fff solid;
+    }
+  
+    .navbar__close-icon {
+      display: block;
+    }
+    .navbar__logo {
+      margin-left: 2.125em;
+    }
+    .navbar__menu-icon {
+      display: block;
+      margin-right: 30px;
+      cursor: pointer;
+    }
+  
+    .navbar__list-background {
+      display: none;
+    }
+  
+    .menu-start {
+      display: flex;
+      height: 100vh;
+      width: 70%;
+      position: absolute;
+      right: 0;
+      top: 0;
+      flex-direction: column;
+      align-items: flex-end;
+      backdrop-filter: blur(1em);
+      background-color: rgba(66, 80, 97, 0.246);
+    }
+  
+    .navbar__list-item:hover {
+      border-bottom: none;
+    }
+  
+    .main__subtitle {
+      font-size: 1em;
+      letter-spacing: 0.16875em;
+      font-weight: 400;
+    }
+  }
+  
