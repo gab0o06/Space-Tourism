@@ -1,18 +1,18 @@
 @font-face {
   font-family: "BarlowCondensed";
   src: local(BarlowCondensed-Regular),
-    url("../../../fonts/BarlowCondensed-Regular.ttf");
+    url("../fonts/BarlowCondensed-Regular.ttf");
 }
 
 @font-face {
   font-family: "BarlowCondensed Bold";
   src: local(BarlowCondensed-Bold),
-    url("../../../fonts/BarlowCondensed-Bold.ttf");
+    url("../fonts/BarlowCondensed-Bold.ttf");
 }
 
 @font-face {
   font-family: "Bellefair";
-  src: local(Bellefair-Regular), url("../../../fonts/Bellefair-Regular.ttf");
+  src: local(Bellefair-Regular), url("../fonts/Bellefair-Regular.ttf");
 }
 
 /* * {
