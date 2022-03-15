@@ -1,22 +1,22 @@
 @font-face {
   font-family: "BarlowCondensed";
   src: local(BarlowCondensed-Regular),
-    url("../../../fonts/BarlowCondensed-Regular.ttf");
+    url("../../fonts/BarlowCondensed-Regular.ttf");
 }
 
 @font-face {
   font-family: "BarlowCondensed Bold";
   src: local(BarlowCondensed-Bold),
-    url("../../../fonts/BarlowCondensed-Bold.ttf");
+    url("../../fonts/BarlowCondensed-Bold.ttf");
 }
 
 @font-face {
   font-family: "Bellefair";
-  src: local(Bellefair-Regular), url("../../../fonts/Bellefair-Regular.ttf");
+  src: local(Bellefair-Regular), url("../../fonts/Bellefair-Regular.ttf");
 }
 
 body {
-  background-image: url("../../img/background-destination-desktop.jpg");
+  background-image: url("../img/background-destination-desktop.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   color: #fff;
@@ -206,7 +206,7 @@ body::-webkit-scrollbar-thumb {
 
 @media screen and (orientation: landscape) and (max-width: 1440px) {
   body {
-    background-image: url("../../img/background-destination-tablet.jpg");
+    background-image: url("../img/background-destination-tablet.jpg");
     font-size: 14px;
   }
   .main__title{
@@ -246,7 +246,7 @@ body::-webkit-scrollbar-thumb {
 
 @media screen and (max-width: 768px) and (orientation: portrait) {
   body {
-    background-image: url("../../img/background-destination-tablet.jpg");
+    background-image: url("../img/background-destination-tablet.jpg");
     font-size: 16px;
   }
   .navbar__line {
@@ -327,7 +327,7 @@ body::-webkit-scrollbar-thumb {
 
 @media screen and (max-width: 414px) and (orientation: portrait) {
   body {
-    background-image: url("../../img/background-destination-mobile.jpg");
+    background-image: url("../img/background-destination-mobile.jpg");
     font-size: 16px;
     background-repeat: repeat;
   }
