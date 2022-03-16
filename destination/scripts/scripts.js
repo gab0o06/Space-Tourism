@@ -15,7 +15,7 @@ const datos = async () => {
   const div = document.getElementById("main__container");
   const response = await fetch("../scripts/data.json");
   const data = await response.json();
-  if ("moon" === self.location.pathname.split("/")[2]) {
+  if ("moon" === self.location.pathname.split("/")[3]) {
     const image = document.createElement("img");
     image.setAttribute("src", data.destinations[0].images.webp);
     image.setAttribute("alt", data.destinations[0].name);
@@ -70,7 +70,7 @@ const datos = async () => {
     div_information.append(ul, h1, p, div3);
     fragment.append(image, div_information);
     div.appendChild(fragment);
-  } else if ("mars" === self.location.pathname.split("/")[2]) {
+  } else if ("mars" === self.location.pathname.split("/")[3]) {
     const image = document.createElement("img");
     image.setAttribute("src", data.destinations[1].images.webp);
     image.setAttribute("alt", data.destinations[1].name);
