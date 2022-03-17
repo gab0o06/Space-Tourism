@@ -33,7 +33,6 @@ const datos = async () => {
         li.classList.add("main__list-item", "main__list-active");
         ul.appendChild(li);
       } else {
-        console.log(data.destinations[i].rutes);
         li.innerHTML = `<a class="main__link" href="${
           data.destinations[i].rutes
         }">${data.destinations[i].name.toUpperCase()}</a>`;
@@ -60,12 +59,12 @@ const datos = async () => {
     const div5 = document.createElement("div");
     div5.classList.add("main__subdata-container");
     const h6_second = document.createElement("h6");
-    h6.textContent = `EST. TRAVEL TIME`;
+    h6_second.textContent = `EST. TRAVEL TIME`;
     h6_second.classList.add("main__data-title");
     const h5_second = document.createElement("h5");
-    h5.textContent = data.destinations[0].distance.toUpperCase();
-    h5.classList.add("main__data-desc");
-    div4.append(h6_second, h5_second);
+    h5_second.textContent = data.destinations[0].travel.toUpperCase();
+    h5_second.classList.add("main__data-desc");
+    div5.append(h6_second, h5_second);
     div3.append(div4, div5);
     div_information.append(ul, h1, p, div3);
     fragment.append(image, div_information);
@@ -79,16 +78,21 @@ const datos = async () => {
     div_information.classList.add("main__information");
     const ul = document.createElement("ul");
     ul.classList.add("main__list");
-    for (let i = 0; i < 4; i++) {
+    const li_moon = document.createElement("li");
+    li_moon.innerHTML = `<a class="main__link" href="${
+      data.destinations[0].rutes
+    }">${data.destinations[0].name.toUpperCase()}</a>`;
+    li_moon.classList.add("main__list-item");
+    ul.appendChild(li_moon);
+    for (let i = 1; i < 4; i++) {
       const li = document.createElement("li");
-      if (data.destinations[i].name.toUpperCase() === "MOON") {
+      if (data.destinations[i].name.toUpperCase() === "MARS") {
         li.innerHTML = `<a class="main__link" href="">${data.destinations[
           i
         ].name.toUpperCase()}</a>`;
         li.classList.add("main__list-item", "main__list-active");
         ul.appendChild(li);
       } else {
-        console.log(data.destinations[i].rutes);
         li.innerHTML = `<a class="main__link" href="${
           data.destinations[i].rutes
         }">${data.destinations[i].name.toUpperCase()}</a>`;
@@ -115,12 +119,126 @@ const datos = async () => {
     const div5 = document.createElement("div");
     div5.classList.add("main__subdata-container");
     const h6_second = document.createElement("h6");
-    h6.textContent = `EST. TRAVEL TIME`;
+    h6_second.textContent = `EST. TRAVEL TIME`;
     h6_second.classList.add("main__data-title");
     const h5_second = document.createElement("h5");
-    h5.textContent = data.destinations[1].distance.toUpperCase();
+    h5_second.textContent = data.destinations[1].travel.toUpperCase();
+    h5_second.classList.add("main__data-desc");
+    div5.append(h6_second, h5_second);
+    div3.append(div4, div5);
+    div_information.append(ul, h1, p, div3);
+    fragment.append(image, div_information);
+    div.appendChild(fragment);
+  } else if("europa" === self.location.pathname.split("/")[3]){
+    const image = document.createElement("img");
+    image.setAttribute("src", data.destinations[2].images.webp);
+    image.setAttribute("alt", data.destinations[2].name);
+    image.classList.add("main__moon-image");
+    const div_information = document.createElement("div");
+    div_information.classList.add("main__information");
+    const ul = document.createElement("ul");
+    ul.classList.add("main__list");
+    for (let i = 0; i < 3; i++) {
+      const li = document.createElement("li");
+      if (data.destinations[i].name.toUpperCase() === "EUROPA") {
+        li.innerHTML = `<a class="main__link" href="">${data.destinations[
+          i
+        ].name.toUpperCase()}</a>`;
+        li.classList.add("main__list-item", "main__list-active");
+        ul.appendChild(li);
+      } else {
+        li.innerHTML = `<a class="main__link" href="${
+          data.destinations[i].rutes
+        }">${data.destinations[i].name.toUpperCase()}</a>`;
+        li.classList.add("main__list-item");
+        ul.appendChild(li);
+      }
+    }
+    const li_titan = document.createElement("li");
+    li_titan.innerHTML = `<a class="main__link" href="${
+      data.destinations[3].rutes
+    }">${data.destinations[3].name.toUpperCase()}</a>`;
+    li_titan.classList.add("main__list-item");
+    ul.appendChild(li_titan);
+    const h1 = document.createElement("h1");
+    h1.textContent = data.destinations[2].name.toUpperCase();
+    h1.classList.add("main__planet-name");
+    const p = document.createElement("p");
+    p.textContent = data.destinations[2].description;
+    p.classList.add("main__planet-desc");
+    const div3 = document.createElement("div");
+    div3.classList.add("main__container-data");
+    const div4 = document.createElement("div");
+    const h6 = document.createElement("h6");
+    h6.textContent = "AVG. DISTANCE";
+    h6.classList.add("main__data-title");
+    const h5 = document.createElement("h5");
+    h5.textContent = data.destinations[2].distance.toUpperCase();
     h5.classList.add("main__data-desc");
-    div4.append(h6_second, h5_second);
+    div4.append(h6, h5);
+    const div5 = document.createElement("div");
+    div5.classList.add("main__subdata-container");
+    const h6_second = document.createElement("h6");
+    h6_second.textContent = `EST. TRAVEL TIME`;
+    h6_second.classList.add("main__data-title");
+    const h5_second = document.createElement("h5");
+    h5_second.textContent = data.destinations[2].travel.toUpperCase();
+    h5_second.classList.add("main__data-desc");
+    div5.append(h6_second, h5_second);
+    div3.append(div4, div5);
+    div_information.append(ul, h1, p, div3);
+    fragment.append(image, div_information);
+    div.appendChild(fragment);
+  } else if("titan" === self.location.pathname.split("/")[3]){
+    const image = document.createElement("img");
+    image.setAttribute("src", data.destinations[3].images.webp);
+    image.setAttribute("alt", data.destinations[3].name);
+    image.classList.add("main__moon-image");
+    const div_information = document.createElement("div");
+    div_information.classList.add("main__information");
+    const ul = document.createElement("ul");
+    ul.classList.add("main__list");
+    for (let i = 0; i < 4; i++) {
+      const li = document.createElement("li");
+      if (data.destinations[i].name.toUpperCase() === "TITAN") {
+        li.innerHTML = `<a class="main__link" href="">${data.destinations[
+          i
+        ].name.toUpperCase()}</a>`;
+        li.classList.add("main__list-item", "main__list-active");
+        ul.appendChild(li);
+      } else {
+        li.innerHTML = `<a class="main__link" href="${
+          data.destinations[i].rutes
+        }">${data.destinations[i].name.toUpperCase()}</a>`;
+        li.classList.add("main__list-item");
+        ul.appendChild(li);
+      }
+    }
+    const h1 = document.createElement("h1");
+    h1.textContent = data.destinations[3].name.toUpperCase();
+    h1.classList.add("main__planet-name");
+    const p = document.createElement("p");
+    p.textContent = data.destinations[3].description;
+    p.classList.add("main__planet-desc");
+    const div3 = document.createElement("div");
+    div3.classList.add("main__container-data");
+    const div4 = document.createElement("div");
+    const h6 = document.createElement("h6");
+    h6.textContent = "AVG. DISTANCE";
+    h6.classList.add("main__data-title");
+    const h5 = document.createElement("h5");
+    h5.textContent = data.destinations[3].distance.toUpperCase();
+    h5.classList.add("main__data-desc");
+    div4.append(h6, h5);
+    const div5 = document.createElement("div");
+    div5.classList.add("main__subdata-container");
+    const h6_second = document.createElement("h6");
+    h6_second.textContent = `EST. TRAVEL TIME`;
+    h6_second.classList.add("main__data-title");
+    const h5_second = document.createElement("h5");
+    h5_second.textContent = data.destinations[3].travel.toUpperCase();
+    h5_second.classList.add("main__data-desc");
+    div5.append(h6_second, h5_second);
     div3.append(div4, div5);
     div_information.append(ul, h1, p, div3);
     fragment.append(image, div_information);

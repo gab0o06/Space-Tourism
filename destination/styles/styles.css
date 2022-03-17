@@ -178,7 +178,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .main__container-data {
-  width: 45%;
+  width: 55%;
   border-top: #383b4b70 solid;
   display: flex;
   justify-content: space-between;
