@@ -13,7 +13,7 @@ closemenu.addEventListener("click", () => {
 const datos = async () => {
   const fragment = document.createDocumentFragment();
   const div = document.getElementById("main__container");
-  const response = await fetch("../scripts/data.json");
+  const response = await fetch("../../scripts/data.json");
   const data = await response.json();
   if ("moon" === self.location.pathname.split("/")[3]) {
     const image = document.createElement("img");
