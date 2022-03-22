@@ -13,7 +13,7 @@ closemenu.addEventListener("click", () => {
 const datos = async () => {
   const fragment = document.createDocumentFragment();
   const div_main = document.getElementById("main__container");
-  const response = await fetch("../../scripts/data.json");
+  const response = await fetch("../scripts/data.json");
   const data = await response.json();
   if (self.location.pathname.endsWith("commander.html")) {
     const div_info = document.createElement("div");
